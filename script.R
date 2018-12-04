@@ -102,5 +102,10 @@ ggplot(data = graph, aes(x = as.numeric(cutoff), y = as.numeric(value), colour =
 
 #tema 2 b
 library(pROC)
-rocA1C <- with(telde,roc(DM,A1C))
+rocA1C <- with(test_data,roc(tipo,cutoff.9))
 plot(rocA1C, col="red", print.auc=TRUE)
+
+
+#tema 3
+
+plot(test_data$radio,test_data$simetria)
